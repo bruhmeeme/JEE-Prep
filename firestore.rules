@@ -1,0 +1,26 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /usernames/{username} {
+      allow read: if true;
+      allow write: if true; // Open for initial concept, properly restricted in next stage
+    }
+    
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+      
+      match /topics/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+      match /studyLogs/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+      match /plannerDays/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+      match /tests/{document=**} {
+        allow read, write: if request.auth != null && request.auth.uid == uid;
+      }
+    }
+  }
+}

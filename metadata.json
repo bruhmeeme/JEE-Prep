@@ -1,0 +1,6 @@
+{
+  "name": "JEE Command",
+  "description": "A focused mission control dashboard for JEE aspirants to track study logs, syllabus completion, and tests.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

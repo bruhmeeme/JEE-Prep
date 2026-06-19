@@ -1,0 +1,82 @@
+export type Subject = 'physics' | 'chemistry' | 'maths';
+
+export const SUBJECT_COLORS = {
+  physics: 'var(--color-subject-physics)',
+  chemistry: 'var(--color-subject-chemistry)',
+  maths: 'var(--color-subject-maths)'
+};
+
+export const JEE_SYLLABUS: Record<Subject, string[]> = {
+  physics: [
+    "Physical World and Measurement",
+    "Kinematics",
+    "Laws of Motion",
+    "Work, Energy and Power",
+    "Motion of System of Particles and Rigid Body",
+    "Gravitation",
+    "Properties of Bulk Matter",
+    "Thermodynamics",
+    "Behavior of Perfect Gases and Kinetic Theory of Gases",
+    "Oscillations and Waves",
+    "Electrostatics",
+    "Current Electricity",
+    "Magnetic Effects of Current and Magnetism",
+    "Electromagnetic Induction and Alternating Currents",
+    "Electromagnetic Waves",
+    "Optics",
+    "Dual Nature of Radiation and Matter",
+    "Atoms and Nuclei",
+    "Electronic Devices",
+    "Communication Systems"
+  ],
+  chemistry: [
+    "Some Basic Concepts of Chemistry",
+    "Structure of Atom",
+    "Classification of Elements and Periodicity in Properties",
+    "Chemical Bonding and Molecular Structure",
+    "States of Matter: Gases and Liquids",
+    "Thermodynamics",
+    "Equilibrium",
+    "Redox Reactions",
+    "Hydrogen",
+    "s-Block Elements (Alkali and Alkaline earth metals)",
+    "Some p-Block Elements",
+    "Organic Chemistry - Some Basic Principles and Techniques",
+    "Hydrocarbons",
+    "Environmental Chemistry",
+    "Solid State",
+    "Solutions",
+    "Electrochemistry",
+    "Chemical Kinetics",
+    "Surface Chemistry",
+    "General Principles and Processes of Isolation of Elements",
+    "p-Block Elements",
+    "d and f Block Elements",
+    "Coordination Compounds",
+    "Haloalkanes and Haloarenes",
+    "Alcohols, Phenols and Ethers",
+    "Aldehydes, Ketones and Carboxylic Acids",
+    "Organic Compounds Containing Nitrogen",
+    "Biomolecules",
+    "Polymers",
+    "Chemistry in Everyday Life"
+  ],
+  maths: [
+    "Sets, Relations and Functions",
+    "Complex Numbers and Quadratic Equations",
+    "Matrices and Determinants",
+    "Permutations and Combinations",
+    "Mathematical Induction",
+    "Binomial Theorem and its Simple Applications",
+    "Sequences and Series",
+    "Limit, Continuity and Differentiability",
+    "Integral Calculus",
+    "Differential Equations",
+    "Coordinate Geometry",
+    "Three Dimensional Geometry",
+    "Vector Algebra",
+    "Statistics and Probability",
+    "Trigonometry",
+    "Mathematical Reasoning"
+  ]
+};

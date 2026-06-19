@@ -1,0 +1,66 @@
+{
+  "collections": [
+    {
+      "name": "usernames",
+      "description": "Lookup table from username to email/uid.",
+      "securityRules": {
+         "read": "true",
+         "create": "true",
+         "update": "request.auth != null && request.auth.uid == data.uid",
+         "delete": "request.auth != null && request.auth.uid == data.uid"
+      }
+    },
+    {
+      "name": "users",
+      "description": "User data.",
+      "securityRules": {
+        "read": "request.auth != null && request.auth.uid == documentId",
+        "create": "request.auth != null && request.auth.uid == documentId",
+        "update": "request.auth != null && request.auth.uid == documentId",
+        "delete": "request.auth != null && request.auth.uid == documentId"
+      },
+      "subcollections": [
+        {
+          "name": "topics",
+          "description": "User topics.",
+          "securityRules": {
+             "read": "request.auth != null && request.auth.uid == parentDocumentId",
+             "create": "request.auth != null && request.auth.uid == parentDocumentId",
+             "update": "request.auth != null && request.auth.uid == parentDocumentId",
+             "delete": "request.auth != null && request.auth.uid == parentDocumentId"
+          }
+        },
+        {
+          "name": "studyLogs",
+          "description": "User study logs.",
+          "securityRules": {
+             "read": "request.auth != null && request.auth.uid == parentDocumentId",
+             "create": "request.auth != null && request.auth.uid == parentDocumentId",
+             "update": "request.auth != null && request.auth.uid == parentDocumentId",
+             "delete": "request.auth != null && request.auth.uid == parentDocumentId"
+          }
+        },
+        {
+          "name": "plannerDays",
+          "description": "User planner days.",
+          "securityRules": {
+             "read": "request.auth != null && request.auth.uid == parentDocumentId",
+             "create": "request.auth != null && request.auth.uid == parentDocumentId",
+             "update": "request.auth != null && request.auth.uid == parentDocumentId",
+             "delete": "request.auth != null && request.auth.uid == parentDocumentId"
+          }
+        },
+        {
+          "name": "tests",
+          "description": "User tests.",
+          "securityRules": {
+             "read": "request.auth != null && request.auth.uid == parentDocumentId",
+             "create": "request.auth != null && request.auth.uid == parentDocumentId",
+             "update": "request.auth != null && request.auth.uid == parentDocumentId",
+             "delete": "request.auth != null && request.auth.uid == parentDocumentId"
+          }
+        }
+      ]
+    }
+  ]
+}
